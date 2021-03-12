@@ -21,7 +21,7 @@ def main():
         'stocks': stocks
     })
     
-    make_csv(df, 'sectir_tickers_')
+    make_csv(df, 'sector_tickers_')
 
 
 if __name__ == "__main__":
