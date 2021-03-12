@@ -6,7 +6,10 @@ from utils import make_csv
 
 def main():
     now = time.strftime('%Y%m%d', time.localtime(time.time()))
-    df = stock.get_market_fundamental_by_ticker(now)
+    kospi = stock.get_market_fundamental_by_ticker(now, market="KOSPI")
+    kosdaq = stock.get_market_fundamental_by_ticker(now, market="KOSDAQ")
+    
+    df = pd.concat([kospi, kosdaq])
     df['ticker'] = df.index
     df = df[['ticker', 'EPS', 'PER', 'BPS', 'PBR', 'DPS', 'DIV']]
     make_csv(df, 'fundament_')
