@@ -7,7 +7,7 @@ from pykrx import stock
 from utils import make_csv, get_index
 
 
-def main():
+def get_sector_tickers_data():
     kospi, kosdaq = get_index()
     markets = kospi + kosdaq
     stocks = []
@@ -25,4 +25,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    get_sector_tickers_data()

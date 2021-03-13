@@ -7,7 +7,7 @@ import pandas as pd
 from utils import make_csv, get_index, get_name
 
 
-def main():
+def get_sector_index_data():
     kospi, kosdaq = get_index()
     
     kospi_df = pd.DataFrame({
@@ -25,7 +25,7 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    get_sector_index_data()
 
 
 

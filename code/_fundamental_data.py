@@ -4,7 +4,7 @@ from pykrx import stock
 from utils import make_csv
 
 
-def main():
+def get_fundamental_data():
     now = time.strftime('%Y%m%d', time.localtime(time.time()))
     kospi = stock.get_market_fundamental_by_ticker(now, market="KOSPI")
     kosdaq = stock.get_market_fundamental_by_ticker(now, market="KOSDAQ")
@@ -16,4 +16,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    get_fundamental_data()
